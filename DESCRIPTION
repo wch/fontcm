@@ -5,7 +5,8 @@ Author: Winston Chang <winston@stdout.org>
 Maintainer: Winston Chang <winston@stdout.org>
 Description: Computer Modern font for use with extrafont package
 Depends:
-    R (>= 2.14),
+    R (>= 2.14)
+Imports:
     extrafont
 License: GPL-2
 Collate:
