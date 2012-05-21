@@ -7,8 +7,6 @@ Description: Computer Modern font for use with extrafont package
 Depends:
     R (>= 2.14),
     extrafont
-Imports:
-    extrafont
 License: GPL-2
 Collate:
     'fontcm.r'
