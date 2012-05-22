@@ -33,7 +33,7 @@ fonts()
 # "CM Typewriter Greek"
 
 # For more detailed font information:
-fonttable_load()
+fonttable()
 ```
 
 
