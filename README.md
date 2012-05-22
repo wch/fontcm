@@ -16,7 +16,9 @@ Then, to install `fontcm`:
 install_github('fontcm', 'wch')
 
 library(extrafont)
-font_addpackage('fontcm')
+font_install('fontcm')
+# In the future, when fontcm is on CRAN, font_install will automatically
+# download, install, and then register the font package with extrafont.
 ```
 
 You can check to see if they're properly installed:
@@ -31,7 +33,7 @@ fonts()
 # "CM Typewriter Greek"
 
 # For more detailed font information:
-font_load_table()
+fonttable_load()
 ```
 
 
