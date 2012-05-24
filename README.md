@@ -1,6 +1,6 @@
 # fontcm
 
-This package contains the Computer Modern font with Paul Murrell's symbol extensions, and is to be used with the extrafont package.
+This package contains the Computer Modern font with Paul Murrell's symbol extensions, and is to be used with the **fonts** package.
 
 The fonts are a subset of the [cm-lgc font package](http://www.ctan.org/tex-archive/help/Catalogue/entries/cm-lgc.html).
 The faces with small caps and italics using old-style numerals (which can hang below the baseline) are not included with this package.
@@ -8,17 +8,17 @@ The faces with small caps and italics using old-style numerals (which can hang b
 
 # Installation
 
-First, make sure that you have [extrafont](https://github.com/wch/extrafont) installed.
+First, make sure that you have [fonts](https://github.com/wch/fonts) installed.
 
 Then, to install `fontcm`:
 
 ```R
 install_github('fontcm', 'wch')
 
-library(extrafont)
+library(fonts)
 font_install('fontcm')
 # In the future, when fontcm is on CRAN, font_install will automatically
-# download, install, and then register the font package with extrafont.
+# download, install, and then register the font package in the fonts database
 ```
 
 You can check to see if they're properly installed:
@@ -43,7 +43,7 @@ Here is an example of using Computer Modern fonts with math symbols.
 
 ```R
 library(ggplot2)
-library(extrafont)
+library(fonts)
 
 setupPdfFonts()
 
@@ -51,8 +51,8 @@ pdf('fontcm.pdf', width=4, height=4)
 
 # Base plot
 p <- qplot(c(1,5), c(1,5)) +
-  xlab("Made with extrafont") + ylab("Made with extrafont") +
-  opts(title = "Made with extrafont")
+  xlab("Made with CM fonts") + ylab("Made with CM fonts") +
+  opts(title = "Made with CM fonts")
 
 # Equation
 eq <- "sum(frac(1, n*'!'), n==0, infinity) == lim(bgroup('(', 1 + frac(1, n), ')')^n, x %->% infinity)"

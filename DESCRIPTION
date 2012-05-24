@@ -1,13 +1,13 @@
 Package: fontcm
-Title: Computer Modern font for use with extrafont package
+Title: Computer Modern font for use with fonts package
 Version: 0.0.1
 Author: Winston Chang <winston@stdout.org>
 Maintainer: Winston Chang <winston@stdout.org>
-Description: Computer Modern font for use with extrafont package
+Description: Computer Modern font for use with fonts package
 Depends:
     R (>= 2.14)
 Imports:
-    extrafont
+    fonts
 License: GPL-2
 Collate:
     'fontcm.r'
