@@ -45,7 +45,7 @@ Here is an example of using Computer Modern fonts with math symbols.
 library(ggplot2)
 library(fonts)
 
-setupPdfFonts()
+loadfonts()
 
 pdf('fontcm.pdf', width=4, height=4)
 
@@ -69,5 +69,5 @@ p + annotate("text", x=3, y=3, parse=TRUE, family="CM Roman", label=eq) +
 dev.off()
 
 # Embed the fonts
-embedExtraFonts('fontcm.pdf', outfile='fontcm-embed.pdf')
+embed_fonts('fontcm.pdf', outfile='fontcm-embed.pdf')
 ```
