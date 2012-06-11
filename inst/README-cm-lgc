@@ -1,6 +1,7 @@
 This file contains the contents of the README file for the cm-lgc font
 package. This R package, 'fontcm', uses a subset of the fonts from
-cm-lgc.
+cm-lgc. It also contains Paul Murrell's symbol extensions to the cm
+fonts.
 
 =========================================================================
 CM-LGC font package
