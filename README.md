@@ -2,6 +2,9 @@
 
 This package contains the Computer Modern font with Paul Murrell's symbol extensions, and is to be used with the **extrafont** package.
 
+When this font package is installed, the CM fonts will be available for PDF or Postscript output files; however, this will (probably) not make the font available for screen or bitmap output files.
+For output to screen or to bitmap files, you will need to install the Computer Modern fonts for your operating system -- however, doing this will not necessarily make the CM *Symbol* font available.
+
 The fonts are a subset of the [cm-lgc font package](http://www.ctan.org/tex-archive/help/Catalogue/entries/cm-lgc.html).
 The faces with small caps and italics using old-style numerals (which can hang below the baseline) are not included with this package.
 
