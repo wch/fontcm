@@ -16,11 +16,9 @@ First, make sure that you have [extrafont](https://github.com/wch/extrafont) ins
 Then, to install `fontcm`:
 
 ```R
-install_github('fontcm', 'wch')
-
 library(extrafont)
 font_install('fontcm')
-# In the future, when fontcm is on CRAN, font_install will automatically
+# It will ask you if you want to download fontcm from CRAN. It will then
 # download, install, and then register the font package in the extrafont database
 ```
 
