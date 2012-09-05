@@ -40,7 +40,21 @@ fonttable()
 
 ## Use example
 
-Here is an example of using Computer Modern fonts with math symbols.
+Here is an example of using Computer Modern fonts with math symbols, using base graphics:
+
+```{r eval=FALSE, tidy=FALSE}
+pdf("plot_cm.pdf", family="CM Roman", width=5, height=5)
+
+plot(c(1,5), c(1,5), main="Made with CM fonts")
+text(x=3, y=3, cex=1.5,
+  expression(italic(sum(frac(1, n*'!'), n==0, infinity) ==
+             lim(bgroup('(', 1 + frac(1, n), ')')^n, n %->% infinity))))
+
+dev.off()
+embed_fonts("plot_cm.pdf", outfile="plot_cm_embed.pdf")
+```
+
+And with ggplot2:
 
 ```R
 library(ggplot2)
@@ -48,27 +62,26 @@ library(extrafont)
 
 loadfonts()
 
-pdf('fontcm.pdf', width=4, height=4)
-
-# Base plot
+pdf("ggplot_cm.pdf", width=4, height=4)
 p <- qplot(c(1,5), c(1,5)) +
   xlab("Made with CM fonts") + ylab("Made with CM fonts") +
-  opts(title = "Made with CM fonts")
+  ggtitle("Made with CM fonts")
 
 # Equation
-eq <- "sum(frac(1, n*'!'), n==0, infinity) == lim(bgroup('(', 1 + frac(1, n), ')')^n, x %->% infinity)"
+eq <- "italic(sum(frac(1, n*'!'), n==0, infinity) ==
+       lim(bgroup('(', 1 + frac(1, n), ')')^n, n %->% infinity))"
 
 # Without the new fonts
 p + annotate("text", x=3, y=3, parse=TRUE, label=eq)
 
 # With the new fonts
 p + annotate("text", x=3, y=3, parse=TRUE, family="CM Roman", label=eq) +
-  opts(plot.title = theme_text(size=16, family="CM Roman")) +
-  opts(axis.title.x = theme_text(size=16, family="CM Roman", face="italic")) +
-  opts(axis.title.y = theme_text(size=16, family="CM Sans", face="bold", angle=90))
+    theme(text         = element_text(size=16, family="CM Roman"),
+          axis.title.x = element_text(face="italic"),
+          axis.title.y = element_text(face="bold"))
 
 dev.off()
 
 # Embed the fonts
-embed_fonts('fontcm.pdf', outfile='fontcm-embed.pdf')
+embed_fonts("ggplot_cm.pdf", outfile="ggplot_cm_embed.pdf")
 ```
