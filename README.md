@@ -37,12 +37,14 @@ fonts()
 fonttable()
 ```
 
-
 ## Use example
 
 Here is an example of using Computer Modern fonts with math symbols, using base graphics:
 
 ```{r eval=FALSE, tidy=FALSE}
+# First, register the fonts with R's PDF output device
+loadfonts()
+
 pdf("plot_cm.pdf", family="CM Roman", width=5, height=5)
 
 plot(c(1,5), c(1,5), main="Made with CM fonts")
