@@ -1,0 +1,6 @@
+fontcm 1.1
+===========
+
+* Documentation fixes.
+
+* Fixes to pass R CMD check on R 3.0.3.
