@@ -12,5 +12,3 @@ Imports:
     extrafont
 License: GPL-2
 URL: https://github.com/wch/fontcm
-Collate:
-    'fontcm.r'
